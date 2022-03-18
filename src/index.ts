@@ -19,7 +19,9 @@ function buttonSubmitClick() {
         if (bPalindrome) {
             divResult.innerText = 'The word is palindrome!'
             //TODO: Implementa la asignación del atributo className con valor 'palindrome'
+            divResult.className = "palindrome";
         } else {
+            divResult.innerText = 'The word is not palindrome!'
             //TODO: Asigna a la propiedad innerText de divResult el valor 'The word is not palindrome, sorry.'
             divResult.className = "notPalindrome";
         }
@@ -30,6 +32,7 @@ const btn = document.querySelector('button');
 if (btn) {
   console.log('attaching listener');
   //TODO: invoca la función addEventListener de btn con parámetros 'click' y buttonSubmitClick
+  btn.addEventListener('click', buttonSubmitClick);
 }
 
 
